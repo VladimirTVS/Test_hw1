@@ -1,0 +1,31 @@
+/*
+4. Найти сумму максимума и минимума
+
+Напечатать сумму максимума и минимума.
+
+Данные на входе:  Пять целых чисел через пробел
+Данные на выходе: Одно целое число - сумма максимума и минимума
+
+Пример:
+Данные на входе:  4 15 9 56 4
+Данные на выходе: 60
+
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a1, a2, a3, a4, a5;
+	scanf("%d%d%d%d%d", &a1, &a2, &a3, &a4, &a5);
+
+	int min = a1, max = a1; // Don't repeat yourself!
+	min = a2 < min ? a2: min; max = a2 > max ? a2 : max;
+	min = a3 < min ? a3: min; max = a3 > max ? a3 : max;
+	min = a4 < min ? a4: min; max = a4 > max ? a4 : max;
+	min = a5 < min ? a5: min; max = a5 > max ? a5 : max;
+
+	printf("%d\n", min+max);
+
+	return 0;
+}
